@@ -1,33 +1,200 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>ScrollIt.js</title><link rel="stylesheet" href="scrollIt/scrollIt.min.css"><link rel="stylesheet" href="stylesheets/styleIt.min.css"><meta name="viewport" content="width=device-width,user-scalable=no"></head><body><main><section data-page="home"><div class="img"><article><h1>ScrollIt.js</h1><p>Create easy and fast way their Single Page applications, no need JQuery or any other framework.</p><button onclick="scrollIt.scroll(1)">Let's go !</button></article></div></section><section data-page="informations"><h3>It's Cool! look it</h3><div class="wrapper"><div class="container"><div class="left"><h4><p>Compatible for all moderns bowsers and opcional polyfill incluse for ie8 and ie7</p><p>Fast and compatible with mobile devices</p><p>Chrome / Firefox / Opera / Safari / IE 9+</p></h4></div><div class="right"><div id="deviceElem" class="device monitor"><div class="border"><div class="interface"><h5></h5></div><div class="device-button"></div></div><div class="bottom"></div><div class="base"><div class="body"></div><div class="suport"></div></div></div></div></div></div></section><section data-page="instalation"><div class="wrapper"><div class="code-container"><div class="info">Instalation on Git</div><pre class="code-section">
-                        <code> $> git clone https://github.com/andreymdias/scrollIt.git </code>
-                    </pre></div><button><a href="https://github.com/andreymdias/scrollit/archive/master.zip">Or download .zip</a></button><div class="code-container"><div class="info">Archives javascript and Stylesheets</div><pre class="code-section">
-                        <code>&lt;link rel="stylesheet" href="scrollIt/scrollIt.min.css" &gt;&lt;/link&gt;</code>
-                        <code style="color:gray">&lt;!-- Optional Polyfill --&gt;</code>
-                        <code>&lt;script src="javascripts/polyfill.js"&gt;&lt;/script&gt;</code>
-                        <code>&lt;script src="scrollIt/scrollIt.js"&gt;&lt;/script&gt;</code>
-                    </pre></div></div></section><section data-page="basic-usage"><div class="wrapper"><div class="code-container"><div class="info">Basic in HTML</div><pre class="code-section">
-                        <code>&lt;body&gt;</code>
-                        <code>&lt;section data-page='whateverSectionName1'&gt;&lt;/section&gt;</code>
-                        <code>&lt;section data-page='whateverSectionName2'&gt;&lt;/section&gt;</code>
-                        <code>&lt;section data-page='whateverSectionName3'&gt;&lt;/section&gt;</code>
-                        <code>&lt;section data-page='whateverSectionName4'&gt;&lt;/section&gt;</code>
-                        <code>&lt;/body&gt;</code>
-                    </pre></div><div class="code-container"><div class="info">Basic in JS</div><pre class="code-section">
-                        <code>var ScrollIt = new ScrollIt();</code>
-                    </pre></div></div></section><section data-page="more-information"><h3>Like it? Contribute</h3><div class="wrapper"><div class="container"><div class="left"><div class="code-container"><div class="info">Fork It!</div><div class="info">Clone</div><pre>
-                                    <code>
-                                        $ git clone https://github.com/andreymdias/scrollIt.git 
-                                    </code>
-                                </pre><div class="info">Create your feature branch</div><pre>
-                                    <code>
-                                        $ git checkout -b feature
-                                    </code>
-                                </pre><div class="info">Commit your changes</div><pre>
-                                    <code>
-                                        $ git commit -m 'Add feature'
-                                    </code>
-                                </pre><div class="info">Push to the branch</div><pre>
-                                    <code>
-                                        $ git push origin feature
-                                    </code>
-                                </pre><div class="info">Submit a pull request</div></div></div><div class="right"><div class="share"><h3>Please, share.</h3></div><div class="social-sharing"><div class="social facebook"><a href="http://www.facebook.com/share.php?u=https://github.com/andreymdias/scrollit"></a></div><div class="social twitter"><a href="https://twitter.com/share"></a></div></div><div class="share"><h3>In Github</h3></div><div class="github-info"><div class="git-container"><h4>STARS</h4><div class="social" data-git="stargazers_count"><a></a></div></div><div class="git-container"><h4>UNWATCHERS</h4><div class="social" data-git="watchers_count"><a></a></div></div><div class="git-container"><h4>FORKS</h4><div class="social" data-git="forks_count"><a></a></div></div></div></div></div></div></section><div class="github"><a href="https://github.com/andreymdias/scrollIt">Fork me on Github</a></div></main></body><script src="scrollIt/polyfill.min.js" async></script><script src="scrollIt/scrollIt.min.js"></script><script src="javascripts/app.min.js" async></script><link rel="stylesheet" href="stylesheets/device.min.css"><link href="http://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css"><script src="//localhost:35729/livereload.js"></script></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Scrollit by andreymdias</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Scrollit</h1>
+        <h2>Pure JavaScript Library for OnePages</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/andreymdias/scrollIt/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/andreymdias/scrollIt/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/andreymdias/scrollIt" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="scrollitjs" class="anchor" href="#scrollitjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>ScrollIt.js</h1>
+
+<h2>
+<a id="pure-javascript-library-for-onepages" class="anchor" href="#pure-javascript-library-for-onepages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pure JavaScript Library for OnePages</h2>
+
+<blockquote>
+<p>Create easy and fast way their Single Page applications.
+Easy, no hassle, no need JQuery or any other framework.</p>
+</blockquote>
+
+<h2>
+<a id="demo-m" class="anchor" href="#demo-m" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo \m/</h2>
+
+<p><strong>Coming Soon</strong> </p>
+
+<h2>
+<a id="get-started" class="anchor" href="#get-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Started</h2>
+
+<h3>
+<a id="install" class="anchor" href="#install" aria-hidden="true"><span class="octicon octicon-link"></span></a>INSTALL</h3>
+
+<pre><code>$ git clone https://github.com/andreymdias/scrollIt
+</code></pre>
+
+<p>or <strong><a href="https://github.com/andreymdias/scrollIt/archive/master.zip">download .ZIP</a></strong></p>
+
+<h3>
+<a id="html" class="anchor" href="#html" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML</h3>
+
+<pre><code>&lt;html&gt;    
+    &lt;head&gt;
+        &lt;!--  Stylesheet  --&gt;
+        &lt;link rel="stylesheet" href="scrollIt/scrollIt.min.css"&gt;
+        &lt;!--  Opcional Polyfill for ie7++ --&gt;
+        &lt;script src="scrollIt/polyfill.min.js"&gt;&lt;/script&gt;
+        &lt;!--  Engine ScrollIt.js  --&gt;
+        &lt;script src="scrollIt/scrollIt.min.js"&gt;&lt;/script&gt;
+        &lt;!--  Javascript of page  --&gt;
+        &lt;script src="app.js"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;section data-page="section1"&gt;&lt;/section&gt;
+        &lt;section data-page="section2"&gt;&lt;/section&gt;
+        &lt;section data-page="section3"&gt;&lt;/section&gt;
+        &lt;section data-page="section4"&gt;&lt;/section&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>
+<a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript</h3>
+
+<pre><code>var ScrollIt = new ScrollIt();
+</code></pre>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
+
+<h4>
+<a id="basic-usage" class="anchor" href="#basic-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic Usage</h4>
+
+<pre><code>var scrollit = new ScrollIt();
+
+// create default nav
+scrollit.nav = true; // default false
+
+// define transition time
+scrollit.time = 500; // default 400
+
+// define delay
+scrollit.delay = 100; // default 0
+
+// define element base
+scrollit.elem = document.querySelector('main'); // default document.body
+</code></pre>
+
+<p>or</p>
+
+<pre><code>var scrollIt = new ScrollIt({
+    nav: true,
+    time: 200,
+    delay: 150,
+    elem: '.baseElement'
+}); 
+</code></pre>
+
+<h4>
+<a id="creating-links-in-html" class="anchor" href="#creating-links-in-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating links in HTML</h4>
+
+<pre><code>&lt;header&gt;
+    &lt;a data-link='name-of-section-1'&gt;&lt;/a&gt;
+    &lt;a data-link='name-of-section-2'&gt;&lt;/a&gt;
+    &lt;a data-link='name-of-section-3'&gt;&lt;/a&gt;
+&lt;/header&gt;
+&lt;div data-page="name-of-section-1"&gt;&lt;/div&gt;
+&lt;div data-page="name-of-section-2"&gt;&lt;/div&gt;
+&lt;div data-page="name-of-section-3"&gt;&lt;/div&gt;
+</code></pre>
+
+<h4>
+<a id="functions" class="anchor" href="#functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions</h4>
+
+<pre><code>scrollIt = new ScrollIt();
+
+document.querySelector('buttom#next').addEventListener(function(){
+    scrollIt.next();
+});
+document.querySelector('buttom#previous').addEventListener(function(){
+    scrollIt.previous();
+});
+document.querySelector('buttom#to2').addEventListener(function(){
+    scrollIt.scroll(1);
+});
+</code></pre>
+
+<h4>
+<a id="add-key-code" class="anchor" href="#add-key-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add Key Code</h4>
+
+<pre><code>scrollIt = new ScrollIt();
+
+scrollIt.keyCodes.previous.push(20,10,23);
+scrollIt.keyCodes.next.push(22,12,25);
+
+//defaults
+
+// previous: [33, 38, 37] - up, left, page up 
+// next: [34, 39, 40] - down, right, page down
+</code></pre>
+
+<p><a href="http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes">More Keys</a></p>
+
+<p><strong><a href="https://github.com/andreymdias/scrollIt/wiki">Full Documentation</a></strong></p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it!</li>
+<li>
+<p>Create your feature branch: `</p>
+
+<pre><code>$ git checkout -b feature
+</code></pre>
+</li>
+<li>
+<p>Commit your changes: `</p>
+
+<pre><code>$ git commit -m 'Add feature'`
+</code></pre>
+</li>
+<li>
+<p>Push to the branch:</p>
+
+<pre><code>$ git push origin feature
+</code></pre>
+</li>
+<li><p>Submit a pull request</p></li>
+</ol>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><strong><a href="https://github.com/andreymdias/scrollIt/blob/master/LICENSE">LICENSE</a></strong></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>

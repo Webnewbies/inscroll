@@ -7,7 +7,7 @@
 
 ## Demo \m/
     
-**[link](andreymdias.github.io/scrollit/)**
+**[link](http://andreymdias.github.io/scrollIt/)**
     
 ## Get Started
 

@@ -7,7 +7,7 @@
 
 ## Demo \m/
     
-**Coming Soon** 
+**[link](andreymdias.github.io/scrollit/)**
     
 ## Get Started
 

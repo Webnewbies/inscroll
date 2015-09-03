@@ -2,7 +2,7 @@
 
 ## Pure JavaScript Library for OnePages
 
->Create easy and fast way their Single Page applications.
+>Create easy and fast way their Scrolling Page applications.
 >Easy, no hassle, no need JQuery or any other framework.
 
 ## Demo \m/
@@ -40,7 +40,7 @@ or **[download .ZIP](https://github.com/andreymdias/scrollIt/archive/master.zip)
     
 ### JavaScript
 
-    var ScrollIt = new ScrollIt();
+    var scrollIt = new ScrollIt();
 
 ### Examples
 

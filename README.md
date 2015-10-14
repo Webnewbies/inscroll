@@ -1,4 +1,6 @@
-#ScrollIt.js
+# ScrollIt.js is now InScroll
+
+# changes is comming :)
 
 ## Pure JavaScript Library for OnePages
 

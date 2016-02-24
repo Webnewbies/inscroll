@@ -25,7 +25,7 @@ var ScrollIt = function (obj) {
     this.delay = obj.delay || 0;
     this.pages = document.querySelectorAll('section[data-page]');
     this.anchors = document.querySelectorAll('a[data-link]');
-    this.keyCodes = {
+    this.keyCodes = obj.key || {
         previous: [33, 38, 37],
         next: [34, 39, 40]
     };
@@ -145,13 +145,15 @@ var ScrollIt = function (obj) {
         // verifica a posição no scroll, com o parametro TRUE para especificar que é root
         ctrl.verificaPos(true);
 
-        window.onkeydown = function (e) {
-            e.preventDefault();
-            // procura na array keyCodes se a tecla tocada correspondente
-            if($.keyCodes.previous.indexOf(e.which) !== -1){
-                $.previous();
-            }else if($.keyCodes.next.indexOf(e.which) !== -1){
-                $.next();
+        if( $.keyCodes != 'no' ) {
+            window.onkeydown = function (e) {
+                e.preventDefault();
+                // procura na array keyCodes se a tecla tocada correspondente
+                if($.keyCodes.previous.indexOf(e.which) !== -1){
+                    $.previous();
+                }else if($.keyCodes.next.indexOf(e.which) !== -1){
+                    $.next();
+                }
             }
         }
 
